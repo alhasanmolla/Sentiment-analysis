@@ -1,0 +1,13 @@
+# 📊 Step 4: prometheus.yml config (optional setup)
+# -----------------------------
+scrape_configs:
+  - job_name: 'sentiment_analysis'
+    static_configs:
+      - targets: ['localhost:5000']  # Replace with your app's host and port
+        labels:
+          app: 'sentiment_analysis'
+          environment: 'development'  # Change as needed
+          instance: 'sentiment_analysis_instance'  # Optional: Add instance label
+          job: 'sentiment_analysis_job'  # Optional: Add job label
+          service: 'sentiment_analysis_service'  # Optional: Add service label
+          version: '1.0.0'  # Optional: Add version label
