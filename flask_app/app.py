@@ -106,7 +106,7 @@ def get_latest_model_version(model_name):
     client = mlflow.MlflowClient()
 
     # Try Production first
-    latest_version = client.get_latest_versions(model_name, stages=["Production"])
+    latest_version = client.get_latest_versions(model_name, stages=["Staging"])
     if latest_version:
         return latest_version[0].version
 
