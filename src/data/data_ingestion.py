@@ -94,6 +94,8 @@ class DataIngestion:
             # # ✅ এখানে রিটার্ন করতে হবে
             # return train_data, test_data
 
+            return{"train_data": train_data, "test_data": test_data}
+
         except Exception as e:
             logging.error('Failed to complete the data ingestion process: %s', e)
             print(f"Error: {e}")

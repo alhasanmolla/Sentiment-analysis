@@ -24,20 +24,33 @@ if __name__ == "__main__":
 
 
         # 1. Data ingestion
-        DataIngestion.data_complete()
+        # DataIngestion.data_complete()
+        data_ingestion = DataIngestion()
+        train, test = data_ingestion.data_complete()
+        
 
         # 2. Data preprocessing
-        DataPreprocessing.preprocessing()
+        # DataPreprocessing.preprocessing()
+        data_prepro = DataPreprocessing()
+        train_processed_data, test_processed_data = data_prepro.preprocessing(train, test)
 
         # 3. Feature engineering
-        FeatureEngineer.feature_eng()
+        # FeatureEngineer.feature_eng()
+        feature_en = FeatureEngineer()
+        train_df, test_df = feature_en.feature_eng(train_processed_data, test_processed_data)
 
         # 4. Model building
-        ModelBuilding.best_model()
+        # ModelBuilding.best_model()
+        model_build = ModelBuilding()
+        model_build.best_model(train_df, test_df)
+
 
     
         # 5. Model evaluation
+        # model_evaluation.evaluation_complete()
         model_evaluation.evaluation_complete()
+        logging.info("Model evaluation completed")
+        
 
         
         # 6. Model registration
