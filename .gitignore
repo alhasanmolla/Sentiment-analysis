@@ -210,3 +210,6 @@ __marimo__/
 # sentiment analysis
 cred.txt
 
+data/
+local_s3/
+.vscode/
