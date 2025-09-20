@@ -54,6 +54,13 @@ Designed for scalability and maintainability, this solution implements MLOps bes
 ## System Architecture
 ![System Architecture](project_image/SentimentAnalysisModel_3.jpg)
 
+The project follows a standard machine learning pipeline architecture with these components:
+
+- **MLflow Tracking**: Used for experiment tracking and model management
+- **DagsHub Integration**: Provides remote tracking URI for MLflow with the project repository
+- **Model Evaluation**: Requires CAPSTONE_TEST environment variable for authentication
+- **Production vs Local Modes**: Script supports both production (with env vars) and local development configurations
+
 ```mermaid
 graph LR
 A[Data Sources] --> B[Data Ingestion]
@@ -67,6 +74,9 @@ H --> I[Monitoring]
 ```
 
 ## Technologies Used
+
+The project utilizes the following technologies:
+
 - **Core Framework**: Python 3.9
 - **ML Operations**: MLflow, DVC, Prometheus
 - **Machine Learning**: Scikit-learn, NLTK
@@ -74,6 +84,14 @@ H --> I[Monitoring]
 - **Data Storage**: Amazon S3
 - **CI/CD**: GitHub Actions
 - **Documentation**: Sphinx
+- **MLflow**: For experiment tracking and model management
+- **DagsHub**: As a remote tracking server for MLflow
+- **Scikit-learn**: For machine learning model implementation
+- **Flask**: For serving the model via REST API
+- **Prometheus**: For monitoring API metrics
+- **DVC**: For data versioning and pipeline management
+- **Pytest**: For testing the application
+- **Tox**: For test automation across environments
 
 ## Installation
 ### Prerequisites
