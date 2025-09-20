@@ -3,7 +3,7 @@ from src.data.data_ingestion import DataIngestion
 from src.data.data_preprocessing import DataPreprocessing
 from src.features.feature_engineering import FeatureEngineer
 from src.model.model_building_main import ModelBuilding
-from src.model.model_evaluation import model_evaluation
+from src.model.model_evaluation import ModelEvaluation
 from src.model.register_model import ModelRegister
 import os   
 if __name__ == "__main__":
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     
         # 5. Model evaluation
         # model_evaluation.evaluation_complete()
-        model_evaluation.evaluation_complete()
+        ModelEvaluation.run_pipeline()
         # logging.info("Model evaluation completed")
         
 
