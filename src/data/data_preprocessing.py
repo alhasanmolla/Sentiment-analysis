@@ -107,7 +107,7 @@ class DataPreprocessing:
             logging.error('Failed to complete the data transformation process: %s', e)
             print(f"Error: {e}")
 
-        return{"train_processed_data": train_processed_data, "test_processed_data": test_processed_data}
+        # return{"train_processed_data": train_processed_data, "test_processed_data": test_processed_data}
 
 
 if __name__ == '__main__':
